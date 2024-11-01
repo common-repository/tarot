@@ -1,0 +1,69 @@
+@charset "UTF-8";
+.tarot-card {
+  background: white;
+  border: 1px solid #000;
+  border-radius: 0.5em;
+  margin: 1em;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 166px;
+  height: 270px; }
+
+/* http://tarotprophet.com/6-most-common-tarot-spreads-and-their-uses/ */
+.tarot-spread {
+  background: forestgreen;
+  padding: 1em;
+  margin-bottom: 0.5em;
+  border: 1px solid darkgreen;
+  /* three cards */ }
+  .tarot-spread.three-card {
+    overflow: hidden; }
+    .tarot-spread.three-card figure {
+      width: 33.333%;
+      max-width: calc(33.333% - .667em);
+      margin: 0 0 0 1em;
+      float: left; }
+      .tarot-spread.three-card figure:first-child {
+        margin-left: 0; }
+      .tarot-spread.three-card figure .tarot-card {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin: 0 0 1em; }
+        .tarot-spread.three-card figure .tarot-card.empty {
+          background-color: #f59e00;
+          cursor: pointer; }
+          .tarot-spread.three-card figure .tarot-card.empty:before {
+            display: block;
+            content: '🏵️';
+            font-size: 10em;
+            text-align: center;
+            height: 270px;
+            display: flex;
+            align-items: center; }
+        .tarot-spread.three-card figure .tarot-card.inverted img {
+          transform: rotate(180deg); }
+        .tarot-spread.three-card figure .tarot-card img {
+          margin: 10px 0;
+          width: 95%;
+          width: calc(100% - 14px);
+          height: auto; }
+      .tarot-spread.three-card figure figcaption {
+        text-align: center;
+        color: #fff;
+        font-weight: 600;
+        font-size: 1em; }
+  .tarot-spread .deck-attribution {
+    display: block;
+    clear: both;
+    text-align: right;
+    font-size: 10px;
+    color: darkgreen;
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif; }
+    .tarot-spread .deck-attribution a {
+      color: darkgreen; }
+
+/*# sourceMappingURL=tarot.css.map */
